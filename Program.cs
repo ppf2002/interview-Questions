@@ -9,14 +9,23 @@ namespace Questions
     {
         static void Main(string[] args)
         {
+            int num = 0;
             int[] arry = { 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6 };
+            int[][] jaggedArray = new int[3][]; // jagged Array
+            int[,] matrix = new int[2, 3]; // multi dimensional Array 
+            double myDbl = 0.001;
+
             Dictionary<int, int> counts = new Dictionary<int, int>();
+
+            string myStr = string.Empty;
             string[] strArray = new string[4];
             string[] strArray1 = { "txt1", "txt2" };
 
             char[] charArray = new char[4];
             char[] charArray1 = "myText".ToCharArray();
 
+            List<int> intList = new List<int>();
+            IEnumerable<int> intList1 = new[] { 1, 2, 2, 3 };
 
             countIntArray();
             int[,] arr = new int[2, 3] { { 1, 2, 3 }, { 4, 5, 6 } };
@@ -413,10 +422,12 @@ namespace Questions
         //Q. 17: count the intiger array how many times interger repetes
         internal static void countIntArray()
         {
+            int[] ints = [10, 45, 15, 15, 10,45, 39, 21, 26]; //example int array
             int[] numbers = { 1, 2, 2, 3, 1, 4, 2 }; // Example array
             Dictionary<int, int> counts = new Dictionary<int, int>();
+            
 
-            foreach (int number in numbers)
+            foreach (int number in ints)
             {
                 if (counts.ContainsKey(number))
                 {
